@@ -14,4 +14,7 @@ set up a reference implemnetation of CED2AR 3.
 CED2AR 3 has a modular architecture. While originally developed in a monorepo, it has been split up now that
 development has largely stabilized for the base services in the reference implemntation. Currently, there are
 actually 3 different build systems in use: primarily Maven for the rdb and core serices, but also a simple
-mill script for publishing the API for different backends, and finally, SBT for the client.
+mill script for publishing the API for different backends, and finally, SBT for the client. In principle, 
+it would likely be possible to switch most of these to `mill`, though for now we've used the most appropriate
+build tool for each case. Additionally, we use primary two languages: Scala and Java. Some modules are either one 
+or the other, except core-services, which currently uses both languages.
