@@ -18,3 +18,8 @@ mill script for publishing the API for different backends, and finally, SBT for 
 it would likely be possible to switch most of these to `mill`, though for now we've used the most appropriate
 build tool for each case. Additionally, we use primary two languages: Scala and Java. Some modules are either one 
 or the other, except core-services, which currently uses both languages.
+
+
+`ced2ar3-api` provides datatypes that can be used both on the client (compiled to JavaScript) and on the server.
+The client packages that make use of `ced2ar3-api` include services and potentially the `ced2ar3-site` modules,
+while the client is just `ced2ar3-client`.
