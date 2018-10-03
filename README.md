@@ -16,7 +16,10 @@ development has largely stabilized for the base services in the reference implem
 actually 3 different build systems in use: primarily Maven for the rdb and core serices, but also a simple
 mill script for publishing the API for different backends, and finally, SBT for the client. In principle, 
 it would likely be possible to switch most of these to `mill`, though for now we've used the most appropriate
-build tool for each case. Additionally, we use primary two languages: Scala and Java. Some modules are either one 
+build tool for each case. There are benefits to using `mill` for every project, since `mill` can be used to do
+a true [multi-project build](https://github.com/jackkoenig/mill-multi-project) using imports.
+
+Additionally, we use primary two languages: Scala and Java. Some modules are either one 
 or the other, except core-services, which currently uses both languages.
 
 
